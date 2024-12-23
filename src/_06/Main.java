@@ -22,29 +22,24 @@ public class Main {
 		int small;
 		int big;
 		
-		if(num1 > num2)
-		
-		/*
-		 * 최대 공약수
-		 * 12 / 1 = 12 -- 0
-		 * 12 / 2 = 6  -- 0
-		 * 12 / 3 = 4  -- 0
-		 * 12 / 4 = 3  -- 0
-		 * 12 / 5 = 2  -- 2
-		 * 12 / 6 = 2  -- 0
-		 * 12 / 7 = 1  -- 5
-		 * 12 / 8 = 1  -- 4
-		 * 12 / 9 = 1  -- 3
-		 * 12 / 10 = 1  -- 2
-		 * 12 / 11= 1  -- 1
-		 * 12 / 12 = 1  -- 0
-		 */
-		
-		for(int i=num1; i<0; i--) {
-			
-			
+		if(num1 > num2) {
+			big = num1;
+			small = num2;
+		}else {
+			big = num2;
+			small = num1;
 		}
 		
+		int gcd = 1; //최대공약수
+		
+		for(int i=1; i<=small  ; i++) {
+			
+			if(big % i == 0 && small % i == 0) {
+				gcd = i;
+			}
+			
+		}
+		System.out.println(gcd);
 	}
 
 }
